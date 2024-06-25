@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -40,7 +40,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .navbar a:hover,
@@ -50,12 +50,12 @@ body {
 
 .main {
   min-height: 100vh;
-  background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29');
+  background-image: url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: auto;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .main.active {
@@ -88,7 +88,7 @@ body {
 .home-content h1 {
   font-size: 78px;
   font-weight: 700;
-  text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   filter: drop-shadow(0 0 5px #09001d);
 }
@@ -96,7 +96,7 @@ body {
 .home-content p {
   font-size: 16px;
   text-align: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin-bottom: 30px;
 }
 
@@ -113,7 +113,7 @@ body {
   letter-spacing: 1px;
   font-weight: 600;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .home-content .start-btn:hover {
@@ -125,14 +125,14 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(.9);
+  transform: translate(-50%, -50%) scale(0.9);
   width: 500px;
   background: #fff;
   border-radius: 6px;
   padding: 10px 25px;
   opacity: 0;
   pointer-events: none;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .popup-info.active {
@@ -177,9 +177,9 @@ body {
   font-size: 16px;
   color: #fff;
   font-weight: 600;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .popup-info .btn-group .info-btn:nth-child(1) {
@@ -206,7 +206,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  transition: .8s ease-in-out;
+  transition: 0.8s ease-in-out;
 }
 
 .quiz-section.active {
@@ -224,7 +224,7 @@ body {
   padding: 20px 30px;
   opacity: 0;
   pointer-events: none;
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .quiz-box.active {
@@ -261,27 +261,6 @@ body {
   padding: 7px;
 }
 
-.question-text {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.option-list .option {
-  width: 100%;
-  background: none;
-  border: 2px solid rgba(255, 255, 255, .2);
-  border-radius: 4px;
-  font-size: 13px;
-  margin: 15px 0;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.option-list .option:hover {
-  background: rgba(255, 255, 255, .1);
-  border-color: rgba(255, 255, 255, .1);
-}
-
 .quiz-footer {
   display: flex;
   justify-content: space-between;
@@ -296,21 +275,65 @@ body {
   font-weight: 600;
 }
 
+.quiz-footer .header-timer {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.quiz-footer #timer {
+  font-size: 18px;
+  font-weight: 700;
+  color: #c40094;
+  margin-left: 5px;
+}
+
 .quiz-footer .next-btn {
   width: 100px;
   height: 45px;
-  background: rgba(255, 255, 255, .1);
-  border: 2px solid rgba(255, 255, 255, .1);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   outline: none;
   border-radius: 6px;
   font-size: 16px;
-  color: rgba(255, 255, 255, .3);
+  color: rgba(255, 255, 255, 0.3);
   font-weight: 600;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .quiz-footer .next-btn:hover {
   background: #950170;
   border-color: #950170;
+}
+
+.option {
+  width: 100%;
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-size: 13px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.option.correct {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.option.incorrect {
+  background-color: #dc3545; /* Red */
+  color: white;
+}
+
+.option.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
 }
